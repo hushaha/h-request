@@ -1,0 +1,22 @@
+{
+	"name": "hush-axios",
+	"version": "1.0.0",
+	"private": true,
+	"repository": "git@github.com:hushaha/h-request.git",
+	"author": "hushaha",
+	"engines": {
+		"node": ">=16",
+		"pnpm": ">=7"
+	},
+	"workspaces": [
+		"example",
+		"src"
+	],
+	"scripts": {},
+	"peerDependencies": {
+		"axios": "^1.7.5"
+	},
+	"devDependencies": {
+		"typescript": "^5.5.4"
+	}
+}

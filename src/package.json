@@ -1,0 +1,30 @@
+{
+	"name": "@hushaha/request",
+	"version": "1.0.1",
+	"type": "module",
+	"main": "index.js",
+	"module": "index.js",
+	"types": "dist/index.d.mts",
+	"author": "hushaha",
+	"license": "MIT",
+	"files": [
+		"dist",
+		"index.js"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hushaha/h-request"
+	},
+	"bugs": {
+		"url": "https://github.com/hushaha/h-request/issues"
+	},
+	"scripts": {
+		"build": "unbuild"
+	},
+	"peerDependencies": {
+		"axios": "^1.7.5"
+	},
+	"devDependencies": {
+		"unbuild": "^2.0.0"
+	}
+}
