@@ -26,7 +26,7 @@ export type ApiSchemas<T extends APISchemaResponse> = {
 };
 
 type ApiList<T extends APISchemaResponse> = {
-	[K in keyof T]: (params: T[K]['request']) => Promise<T[K]['response']>;
+	[K in keyof T]: (params: T[K]['request']) => Promise<{ data: T[K]['response']; error: boolean }>;
 };
 
 const MATCH_METHOD = /^(GET|POST|PUT|DELETE|HEAD|OPTIONS|CONNECT|TRACE|PATCH)\s+/;
@@ -68,7 +68,7 @@ const attachApiList = <T extends APISchemaResponse>(
 				? { data: _params }
 				: { params: _params };
 
-			return client.request<any>({
+			return client.request({
 				url,
 				method: method.toLowerCase(),
 				...requestParams,
