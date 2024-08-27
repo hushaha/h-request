@@ -2,14 +2,18 @@
 	"name": "@hushaha/request",
 	"version": "1.0.1",
 	"type": "module",
-	"main": "index.js",
-	"module": "index.js",
-	"types": "dist/index.d.mts",
+	"main": "./dist/index.cjs",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"types": "./dist/index.d.ts",
 	"author": "hushaha",
 	"license": "MIT",
 	"files": [
-		"dist",
-		"index.js"
+		"dist"
 	],
 	"repository": {
 		"type": "git",
